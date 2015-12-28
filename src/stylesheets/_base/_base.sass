@@ -10,8 +10,8 @@ body
     top: 0
     left: 0
     width: 100vw
-    height: 300vw
-    background: #000 url(/assets/images/stars.png) repeat top center
+    height: 600vw
+    background: #000 url(../assets/images/stars.png) repeat top center
     &.animate
       @include animation(scroll 8.5s forwards)
 @media all and (max-device-width: 600px)
@@ -37,7 +37,7 @@ footer
   position: absolute
   top: 100vh
   &.animate
-    @include animation(scaled-scroll 8.5s forwards, scale-up 5s 10s forwards)
+    @include animation(scaled-scroll 8.5s forwards, scale-up 15s 10s forwards)
 
 
 
@@ -63,3 +63,71 @@ footer
   to
     @include transform-origin(center -30vh)
     @include transform(scale(1) translateY(-100vh))
+
+
+button
+
+  opacity: 0
+  width: 100%
+  text-align: center
+
+  background: transparent
+  position: absolute
+  bottom: 5vh
+  z-index: 55
+  //left: 5vw
+  //border: 3px solid yellow
+  //border-radius: 50%
+  color: yellow
+  border: NONE; //opacity: 0
+  text-transform: lowercase
+  letter-spacing: 4px
+  font-size: 4em
+  cursor: pointer
+  font-family: 'star_jedi_hollowregular'
+  outline: none
+  @include radial-gradient( circle at 50% 50%,rgba(0,0,0,.5) 29%, transparent 81%)
+  @include animation(btn-fadein 1.5s 6s, pulsate 3.5s 6s infinite)
+
+  &:hover
+    @include radial-gradient( circle at 50% 50%,rgba(0,0,0,.5) 39%, transparent 81%)
+
+
+@include keyframes(btn-fadein)
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+
+@include keyframes(pulsate)
+  0%
+    opacity: 1
+  50%
+    opacity: 0.5
+  100%
+    opacity: 1
+
+
+.endcopy
+  opacity: 0
+  z-index: 8888879
+  position: absolute
+  top: 60%
+  width: 100%
+  color: black!important
+  text-align: center
+  &.on
+    opacity: 1
+
+  h1
+    color: #000
+    margin-bottom: 0
+    //line-height: 5em;
+
+  h2
+    margin: 0
+    font-size: 2em
+
+audio
+  display: none

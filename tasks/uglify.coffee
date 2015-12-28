@@ -36,4 +36,7 @@ gulp.task 'uglify', ['build'], ->
   fonts = gulp.src('./build/assets/fonts/**')
     .pipe(gulp.dest('./dist/assets/fonts/'))
 
-  merge(js, css, html, images, fonts)
+  audio = gulp.src('./build/assets/audio/**')
+    .pipe(gulp.dest('./dist/assets/audio/'))
+
+  merge(js, css, html, images, fonts, audio)

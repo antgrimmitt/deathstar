@@ -1,4 +1,5 @@
 .deathstar
+
   background: #6f7b88
   width: 50vw
 
@@ -11,9 +12,13 @@
   z-index: -1
 
   .square
-    @include animation(spin 20.5s linear infinite)
+    &.animate
+      @include animation(spin 20.5s linear infinite)
     width: 100%
     height: 100%
+    &.stop
+      @include animation(none)
+      @include transform(translateX(-100%))
 
   .sq1
     width: 25%
@@ -233,6 +238,21 @@
   border-radius: 50%
   @include radial-gradient( circle at 50% 50%, black -31%, transparent 58%)
 
+  &.fire
+    .lines
+      .l5
+        @include transition(height 1.5s 5s)
+        height: 100%
+      .l6
+        @include transition(all 1.5s 5s)
+        @include transform(translateX(0%))
+      .l7
+        @include transition(all 1.5s 5s)
+        width: 100%
+      .l8
+        @include transition(all 1.5s 5s)
+        @include transform(translateY(0%))
+
   .lines
     width: 100%
     height: 100%
@@ -251,7 +271,7 @@
     .l3
       width: 50%
       height: 50%
-        float: left
+      float: left
       //border-bottom: 2px solid rgba(#ddd,.5)
       //border-right: 2px solid rgba(#ddd,.5)
 
@@ -259,9 +279,53 @@
       width: 50%
       height: 50%
       float: left
-      border-right: 2px solid rgba(#ddd,.25)
+      margin-left: -.5%
+      border-left: 2px solid rgba(#ddd,.25)
 
+    .l5
+      width: 102%
+      height: 0%
+      float: left
+      //border-bottom: 2px solid lawngreen
+      border-right: 2px solid lawngreen
 
+    .l6
+      width: 100%
+      @include transform(translateX(100%))
+      height: 101%
+      float: left
+      //display: none
+      border-bottom: 2px solid lawngreen
+      //border/-right: 2px solid rgba(#ddd,.5)
+    .l7
+      width: 0%
+      height: 100%
+      //display: none
+      margin-top: -1.5%
+      float: left
+      border-top: 2px solid lawngreen
+
+    .l8
+      width: 100%
+      height: 100%
+      @include transform(translateY(105%))
+      //display: none
+      /* float: right */
+      border-left: 2px solid lawngreen
+      margin-left: -1.5%
+      margin-top: -2%
+.boom
+  background: lawngreen
+  width: 1vw
+  height: 1vh
+  opacity: 0
+  border-radius: 50%
+  position: absolute
+  top: 46.5%
+  left: 58.2%
+  z-index: 66666
+  &.animate
+    @include animation(boom 1.5s 6.5s forwards)
 
 
 @include keyframes(spin)
@@ -269,6 +333,13 @@
     @include transform(translateX(0))
   to
     @include transform(translateX(-200%))
+
+
+@include keyframes(prep-fire)
+  from
+    @include transform(translateX(0))
+  to
+    @include transform(translateX(-100%))
 
 .frame1, .frame2, .frame3
   width: 100%
@@ -285,3 +356,16 @@
   .sq1
     left: -5%
     width: 50%
+
+@include keyframes(boom)
+  from
+    opacity: 1
+    width: 5%
+    height: 5%
+  to
+    top: -100%
+    left: -100%
+    opacity: 1
+    background: #ffffff
+    width: 500%
+    height: 500%

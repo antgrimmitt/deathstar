@@ -46,19 +46,20 @@ html
     link(rel='shortcut icon', href='#{image_src}')
     link(href='https://fonts.googleapis.com/css?family=News+Cycle', rel='stylesheet', type='text/css')
     script(src="https://code.jquery.com/jquery-2.1.4.min.js")
-    script(src="../scripts/main.js")
+    script(src="scripts/main.js")
   body
     div.stars
-    audio#music(preload='auto')
-      source(src='/assets/audio/Star_Wars_original_opening_crawl_1977.ogg', type='audio/ogg')
-      source(src='/assets/audio/Star_Wars_original_opening_crawl_1977.mp3', type='audio/mpeg')
-
-
+    audio#music(preload='auto' controls)
+      source(src='assets/audio/starwars-long.ogg', type='audio/ogg')
+      source(src='assets/audio/starwars-long.m4a')
+    button(onclick='play()') click here to start
     .scene1
       .intro
-        p A short time ago, in a flat somewhere,
+        p A short time ago, in a flat far,
           br
-          span somewhere in London ...
+          span far away ...
+          br
+          span (somewhere in London)
 
         h1.logo STAR
           br
@@ -70,9 +71,11 @@ html
         h2 The Phantom Bug
         span It is a period of downtime
         br
-        span ODV allies have disappeared
+        span One Digital Vision allies
         br
-        span for the christmas break
+        span have disappeared for
+        br
+        span the christmas break
         br
         br
         span Ant is bored as James had to work
@@ -153,9 +156,14 @@ html
             .weapon
               .lines
                 .l1
+                  .l5
                 .l2
+                  .l6
                 .l3
+                  .l7
                 .l4
+                  .l8
+
             .sq8
             //.sq9
             .sq10
@@ -196,5 +204,11 @@ html
             .sq21
             .sq22
             .sq23
+  .boom
+  .endcopy
+    h1 404 page not found
+    h2 it's been destroyed by a death star :(
+    br
+    h2 Merry Christmas and a happy new year  From Ant and James
 
     +footer

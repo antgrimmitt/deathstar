@@ -16,6 +16,11 @@
     font-size: 2.51em
     @include animation(fade-out 1.5s  5s forwards)
 
+@media all and (orientation: landscape ) and (max-device-width: 1024px)
+  .intro
+    p
+      bottom: 10vh
+
 @include keyframes(fade-out)
   from
     opacity: 1
@@ -25,7 +30,6 @@
 
 h1
   color: #e8ea50
-
   display: block
   bottom: 25vh
   position: absolute
@@ -33,6 +37,20 @@ h1
   font-size: 10em
   line-height: 1em
   width: 100%
+
+@media all and (max-device-width: 600px)
+  h1
+    font-size: 8em
+    bottom: 25vh
+    .small
+      font-size: .3em
+
+@media all and (orientation: landscape)  and (max-device-width: 1024px)
+  h1
+    font-size: 5em
+    bottom: 2vh
+    .small
+      font-size: .3em
 .small
   opacity: 0
   font-size: .5em
@@ -79,17 +97,18 @@ h1
   bottom: 1vh
   text-align: center
   color: #e8ea50
+  opacity: 0
   font-family: 'News Cycle',sans-serif
 
-  @include transform(perspective(300px) rotateX(25deg) translate(0, 90vh))
-
+  @include transform(perspective(300px) rotateX(25deg) translate(0, 100vh))
 
   &.animate
     @include animation(story-anim 120s forwards)
 
 @include keyframes(story-anim)
   0%
-    @include transform(perspective(300px) rotateX(25deg) translate(0, 90vh))
+    opacity: 1
+    @include transform(perspective(300px) rotateX(25deg) translate(0, 100vh))
   55%
     opacity: 1
   62.5%
@@ -97,3 +116,34 @@ h1
   100%
     opacity: 0
     @include transform(perspective(300px) rotateX(25deg) translate(0, -60vh))
+
+@media all and (orientation: landscape)  and (max-device-width: 1024px)
+  .story
+    font-size: 1em
+    top: 1vh
+  @include keyframes(story-anim)
+    0%
+      opacity: 1
+      @include transform(perspective(300px) rotateX(25deg) translate(0, 90vh))
+    55%
+      opacity: 1
+    62.5%
+      opacity: 0
+    100%
+      opacity: 0
+      @include transform(perspective(300px) rotateX(25deg) translate(0, -100vh))
+@media all and (orientation: landscape) and (max-device-width: 1024px)
+  .story
+    font-size: 1em
+    top: 1vh
+  @include keyframes(story-anim)
+    0%
+      opacity: 1
+      @include transform(perspective(300px) rotateX(25deg) translate(0, 90vh))
+    55%
+      opacity: 1
+    62.5%
+      opacity: 0
+    100%
+      opacity: 0
+      @include transform(perspective(300px) rotateX(25deg) translate(0, -100vh))
