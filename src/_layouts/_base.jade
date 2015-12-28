@@ -1,0 +1,200 @@
+include ../_includes/_header.jade
+include ../_includes/_footer.jade
+
+- var title = 'deathstar'
+- var description = 'HTML5 CSS3 STAR WARS DEATH STAR'
+
+- var image_src = 'link to image representing the page'
+- var site_name = ''
+- var site_url = 'http://'
+- var type = 'website'
+
+- var twitter_handle = '@'
+- var twitter_card_type = 'summary'
+- var domain = ''
+
+doctype html
+html
+  head
+    block title
+      title deathstar
+
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
+
+    meta(name='description', content='#{description}')
+
+    meta(property='og:description', content='#{description}')
+    meta(property='og:image', content='#{image_src}')
+    meta(property='og:site_name', content='#{domain}')
+    meta(property='og:title', content='#{title}')
+    meta(property='og:type', content='#{type}')
+    meta(property='og:url', content='#{site_url}')
+
+    meta(name='twitter:creator', content='#{twitter_handle}')
+    meta(name='twitter:site', content='#{twitter_handle}')
+    meta(name='twitter:card', content='#{twitter_card_type}')
+    meta(name='twitter:url', content='#{site_url}')
+    meta(name='twitter:title', content='#{title}')
+    meta(name='twitter:description', content='#{description}')
+    meta(name='twitter:image:src', content='#{image_src}')
+    meta(name='twitter:site', content='#{twitter_handle}')
+    meta(name='twitter:domain', content='#{domain}')
+
+    link(rel='stylesheet' href='stylesheets/main.css')
+    link(rel='shortcut icon', href='#{image_src}')
+    link(href='https://fonts.googleapis.com/css?family=News+Cycle', rel='stylesheet', type='text/css')
+    script(src="https://code.jquery.com/jquery-2.1.4.min.js")
+    script(src="../scripts/main.js")
+  body
+    div.stars
+    audio#music(preload='auto')
+      source(src='/assets/audio/Star_Wars_original_opening_crawl_1977.ogg', type='audio/ogg')
+      source(src='/assets/audio/Star_Wars_original_opening_crawl_1977.mp3', type='audio/mpeg')
+
+
+    .scene1
+      .intro
+        p A short time ago, in a flat somewhere,
+          br
+          span somewhere in London ...
+
+        h1.logo STAR
+          br
+          span WARS
+          br
+          span.small THE HTMl5 CSS3 VERSION
+      .story
+        h3 Revison 1:
+        h2 The Phantom Bug
+        span It is a period of downtime
+        br
+        span ODV allies have disappeared
+        br
+        span for the christmas break
+        br
+        br
+        span Ant is bored as James had to work
+        br
+        span so Ant decided to build a
+        br
+        span Death star.
+        br
+        br
+        span As he is going through
+        br
+        span a star wars fan boy phase ...
+        br
+        span he is also taking the opportunity to
+        br
+        span learn latin
+        br
+        br
+        span Lorem ipsum dolor sit amet,
+        br
+        span cu his feugait singulis. Omnium ornatus
+        br
+        span commune ex ius, mea at iisque
+        br
+        span blegimus. Dolore ridens atomorum eu mel
+        br
+        br
+        span Vis ei exerci eleifend iracundia,
+        br
+        span id cum option ocurreret repudiandae.
+        br
+        span Ne est melius appareat, impedit voluptatibus
+        br
+        span ea qui, diam feugiat te vis.
+
+
+
+    .scene2
+      div.quads
+        .quad.q1
+        .quad.q2
+        .quad.q3
+        .quad.q4
+      .deathstar
+        .square
+          .frame1
+            .sq1
+            .sq2
+            .sq3
+            .sq4
+            .sq5
+            .sq6
+            .sq7
+            .sq8
+            .sq9
+            .sq10
+            .sq11
+            .sq12
+            .sq13
+            .sq14
+            .sq15
+            .sq16
+            .sq17
+            .sq18
+            .sq19
+            .sq20
+            .sq21
+            .sq22
+            .sq23
+          .frame2
+            .sq1
+            .sq2
+            .sq3
+            .sq4
+            //.sq5
+            .sq6
+            .sq7
+            .weapon
+              .lines
+                .l1
+                .l2
+                .l3
+                .l4
+            .sq8
+            //.sq9
+            .sq10
+            .sq11
+            .sq12
+            .sq13
+            //.sq14
+            .sq15
+            .sq16
+            .sq17
+            .sq18
+            .sq19
+            .sq20
+            .sq21
+            .sq22
+            .sq23
+          .frame3
+            .sq1
+            .sq2
+            .sq3
+            .sq4
+            //.sq5
+            .sq6
+            .sq7
+            .sq8
+            //.sq9
+            .sq10
+            .sq11
+            .sq12
+            .sq13
+            //.sq14
+            .sq15
+            .sq16
+            .sq17
+            .sq18
+            .sq19
+            .sq20
+            .sq21
+            .sq22
+            .sq23
+
+    +footer

@@ -1,0 +1,22 @@
+{
+  "name": "deathstar",
+  "version": "0.1.0",
+  "authors": [
+    "ant grimmitt <ant@onedigitalvision.com>"
+  ],
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    
+    "normalize-scss": "~3.0.3"
+    
+  }
+}

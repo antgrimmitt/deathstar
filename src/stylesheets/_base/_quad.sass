@@ -1,0 +1,23 @@
+.quads
+  width: 100vw
+  height: 100vh
+  .quad
+    width: 50vw
+    height: 50vh
+    float: left
+    //background: rgba(#fff, .3)
+
+    &.q1
+      @include radial-gradient( circle at 100% 100%, transparent 29%, black 59%, transparent 62%)
+      z-index: 1
+    &.q2
+      @include radial-gradient( circle at 0% 100%, transparent 29%, black 60%, transparent 75%)
+      z-index: 2
+    &.q3
+      @include  radial-gradient( circle at 100% 0%, transparent 30.8%, black 58%, transparent 67%)
+      z-index: 3
+      @include transform(scale(1.5) translate(-.5%, 16.65%))
+    &.q4
+      @include radial-gradient( circle at 0% 0%, transparent 29%, black 55%, transparent 58%);
+      z-index: 4;
+      @include transform(scale(1.5) translate(2%,16.65%))

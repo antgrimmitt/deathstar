@@ -1,0 +1,8 @@
+build/
+dist/
+*.map
+node_modules/
+aws.json
+src/vendor/
+.sass-cache
+*.log

@@ -1,0 +1,287 @@
+.deathstar
+  background: #6f7b88
+  width: 50vw
+
+  overflow: hidden
+  height: 50vw
+  border-radius: 50%
+  position: absolute
+  top: 25%
+  left: 25%
+  z-index: -1
+
+  .square
+    @include animation(spin 20.5s linear infinite)
+    width: 100%
+    height: 100%
+
+  .sq1
+    width: 25%
+    height: 10%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 0%
+    z-index: -1
+    left: 20%
+
+  .sq2
+    width: 45%
+    height: 10%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 0%
+    z-index: -1
+    left: 47%
+
+  .sq3
+    width: 40%
+    height: 10%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 12%
+    z-index: -1
+    left: 0%
+
+  .sq4
+    width: 55%
+    height: 10%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 12%
+    z-index: -1
+    left: 42%
+
+  .sq5
+    width: 15%
+    height: 18%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 25%
+    z-index: -1
+    left: 0%
+
+  .sq6
+    width: 15%
+    height: 18%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 25%
+    z-index: -1
+    left: 18%
+
+  .sq7
+    width: 47%
+    height: 18%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 25%
+    z-index: -1
+    left: 36%
+
+  .sq8
+    width: 30%
+    height: 18%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 25%
+    z-index: -1
+    left: 86%
+
+  .sq9
+    width: 30%
+    height: 5%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 45%
+    z-index: -1
+    left: 0%
+
+  .sq10
+    width: 30%
+    height: 5%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 45%
+    z-index: -1
+    left: 32%
+
+  .sq11
+    width: 30%
+    height: 5%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 45%
+    z-index: -1
+    left: 65%
+
+  .sq12
+    width: 30%
+    height: 5%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 45%
+    z-index: -1
+    left: 95%
+
+  .sq13
+    width: 100%
+    height: 3%
+    background: rgba(#2f3438,.9)
+    position: absolute
+    top: 52%
+    z-index: -1
+    left: 0%
+
+
+  .sq14
+    width: 20%
+    height: 5%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 58%
+    z-index: -1
+    left: 0%
+
+  .sq15
+    width: 30%
+    height: 5%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 58%
+    z-index: -1
+    left: 21%
+
+  .sq16
+    width: 5%
+    height: 5%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 58%
+    z-index: -1
+    left: 53%
+
+  .sq17
+    width: 2.5%
+    height: 5%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 58%
+    z-index: -1
+    left: 60%
+
+  .sq18
+    width: 10%
+    height: 5%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 58%
+    z-index: -1
+    left: 64%
+
+  .sq19
+    width: 30%
+    height: 5%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 58%
+    z-index: -1
+    left: 76%
+
+  .sq20
+    width: 30%
+    height: 15%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 65%
+    z-index: -1
+    left: 0%
+  .sq21
+    width: 30%
+    height: 15%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 65%
+    z-index: -1
+    left: 32%
+  .sq22
+    width: 35%
+    height: 15%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 65%
+    z-index: -1
+    left: 64%
+
+  .sq23
+    width: 100%
+    height: 25%
+    background: rgba(#2f3438,.8)
+    position: absolute
+    top: 83%
+    z-index: -1
+    left: 0%
+
+.weapon
+  background-color: lighten(#2f3438, 8)
+  border: 3px solid rgba(#2f3438,.8)
+  width: 35%
+  height: 35%
+  position: absolute
+  top: 16%
+  overflow: hidden
+  left: 50%
+  border-radius: 50%
+  @include radial-gradient( circle at 50% 50%, black -31%, transparent 58%)
+
+  .lines
+    width: 100%
+    height: 100%
+    .l1
+      width: 50%
+      height: 50%
+      float: left
+      border-bottom: 2px solid rgba(#ddd,.25)
+      border-right: 2px solid rgba(#ddd,.25)
+    .l2
+      width: 50%
+      height: 50%
+      float: left
+      border-bottom: 2px solid rgba(#ddd,.25)
+      //border-right: 2px solid rgba(#ddd,.5)
+    .l3
+      width: 50%
+      height: 50%
+        float: left
+      //border-bottom: 2px solid rgba(#ddd,.5)
+      //border-right: 2px solid rgba(#ddd,.5)
+
+    .l4
+      width: 50%
+      height: 50%
+      float: left
+      border-right: 2px solid rgba(#ddd,.25)
+
+
+
+
+@include keyframes(spin)
+  from
+    @include transform(translateX(0))
+  to
+    @include transform(translateX(-200%))
+
+.frame1, .frame2, .frame3
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+.frame2
+  @include transform(translateX(100%))
+  .sq1
+    left: -5%
+    width: 50%
+.frame3
+  @include transform(translateX(200%))
+  .sq1
+    left: -5%
+    width: 50%
